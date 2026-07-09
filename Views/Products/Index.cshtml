@@ -37,11 +37,11 @@
 
                     <p class="card-text">@item.Description</p>
 
-                    <div class="d-grid gap-2">
-                        <a asp-action="Details"
+            
+                        <a asp-action="AddToCart"
                            asp-route-id="@item.Id"
-                           class="btn btn-primary">
-                            View Details
+                           class="btn btn-success">
+                            🛒 Add to Cart
                         </a>
 
                         <a asp-action="Edit"
@@ -55,10 +55,10 @@
                            class="btn btn-danger">
                             Delete
                         </a>
+
                     </div>
                 </div>
             </div>
-        </div>
     }
 </div>
 
