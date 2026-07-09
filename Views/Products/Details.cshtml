@@ -1,0 +1,60 @@
+@model EliteTech_Ecommerce.Models.Product
+
+@{
+    ViewData["Title"] = "Product Details";
+}
+
+<div class="container mt-5">
+    <div class="card shadow-lg">
+        <div class="row g-0">
+
+            <div class="col-md-5">
+                <img src="@Model.ImageUrl"
+                     class="img-fluid rounded-start"
+                     alt="@Model.Name"
+                     style="height:450px; width:100%; object-fit:cover;" />
+            </div>
+
+            <div class="col-md-7">
+                <div class="card-body">
+
+                    <h2 class="card-title">@Model.Name</h2>
+
+                    <h3 class="text-success mt-3">
+                        ₹@Model.Price
+                    </h3>
+
+                    <hr />
+
+                    <h5>Description</h5>
+
+                    <p class="card-text">
+                        @Model.Description
+                    </p>
+
+                    <div class="mt-4">
+
+                        <a asp-action="Edit"
+                           asp-route-id="@Model.Id"
+                           class="btn btn-warning">
+                            ✏️ Edit
+                        </a>
+
+                        <a asp-action="Index"
+                           class="btn btn-secondary">
+                            ⬅ Back
+                        </a>
+                        <a asp-action="AddToCart"
+                           asp-route-id="@Model.Id"
+                           class="btn btn-success">
+                            🛒 Add to Cart
+                        </a>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
